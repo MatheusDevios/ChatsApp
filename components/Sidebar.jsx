@@ -4,12 +4,30 @@ import styled from "styled-components";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
+import * as EmailValidator from "email-validator";
+import { auth } from "../firebase";
 
 const Sidebar = () => {
+  const createChat = () => {
+    const input = prompt(
+      "Please enter an email adders for the user you wish to chat with"
+    );
+
+    if (!input) return;
+
+    if (EmailValidator.validate(input)) {
+      //WE NEED TO ADD THE CHAT INTO THE DB "CHATS COLLECTION"
+    }
+  };
+
   return (
     <Container>
       <Header>
-        <UserAvatar />
+        <UserAvatar
+          onClick={() => {
+            auth.signOut();
+          }}
+        />
 
         <IconsContainer>
           <IconButton>
@@ -26,7 +44,7 @@ const Sidebar = () => {
         <SearchInput placeholder="Search in chats" />
       </Search>
 
-      <SidebarButtom>START A NEW CHAT</SidebarButtom>
+      <SidebarButtom onClick={createChat}>START A NEW CHAT</SidebarButtom>
 
       {/* LIST OF CHATS */}
     </Container>
