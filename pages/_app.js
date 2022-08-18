@@ -4,13 +4,19 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import Loading from "../components/Loading";
 import { useEffect } from "react";
+import { setDoc, doc } from "firebase/firestore";
 
 function MyApp({ Component, pageProps }) {
   const [user, loading] = useAuthState(auth);
 
   useEffect(() => {
     if (user) {
-      console.log(user);
+      setDoc(doc(db, "users", user.uid), {
+        username: user.displayName,
+        email: user.email,
+        lastSeen: user.metadata.lastSignInTime,
+        profilePicture: user.photoURL,
+      });
     }
   }, [user]);
 
