@@ -5,7 +5,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 import styled from "styled-components";
-import { auth, db } from "../firebase";
+import { auth, db } from "../firebase/firebase";
 import getRecipientEmail from "../utils/getRecipientEmail";
 
 const Chat = ({ id, users }) => {

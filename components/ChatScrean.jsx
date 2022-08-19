@@ -4,7 +4,7 @@ import { Avatar, IconButton } from "@material-ui/core";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { auth, db } from "../firebase";
+import { auth, db } from "../firebase/firebase";
 import getRecipientEmail from "../utils/getRecipientEmail";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import MoreVertIcon from "@mui/icons-material/MoreVert";

@@ -12,7 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import styled from "styled-components";
 import ChatScrean from "../../components/ChatScrean";
 import Sidebar from "../../components/Sidebar";
-import { auth, db } from "../../firebase";
+import { auth, db } from "../../firebase/firebase";
 import getRecipientEmail from "../../utils/getRecipientEmail";
 
 const Chat = ({ chat, messages }) => {

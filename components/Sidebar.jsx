@@ -5,11 +5,11 @@ import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import * as EmailValidator from "email-validator";
-import { auth, db } from "../firebase";
 import { doc, where, query, collection, setDoc } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 import Chat from "./Chat";
+import { auth, db } from "../firebase/firebase";
 
 const Sidebar = () => {
   const [user] = useAuthState(auth);
