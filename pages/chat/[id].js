@@ -15,7 +15,7 @@ import Sidebar from "../../components/Sidebar";
 import { auth, db } from "../../firebase";
 import getRecipientEmail from "../../utils/getRecipientEmail";
 
-const Chat = ({ chat }) => {
+const Chat = ({ chat, messages }) => {
   const [user] = useAuthState(auth);
   return (
     <Container>
@@ -24,7 +24,7 @@ const Chat = ({ chat }) => {
       </Head>
       <Sidebar />
       <ChatContainer>
-        <ChatScrean />
+        <ChatScrean chat={chat} messages={messages} />
       </ChatContainer>
     </Container>
   );
@@ -57,11 +57,11 @@ export async function getServerSideProps(context) {
     ...chatsResponse.data(),
   };
 
-  console.log(chat, messages);
+  // console.log(chat, messages);
   return {
     props: {
-      messages: JSON.stringify(messages),
       chat: chat,
+      messages: JSON.stringify(messages),
     },
   };
 }
@@ -70,4 +70,6 @@ const Container = styled.div`
   display: flex;
 `;
 
-const ChatContainer = styled.div``;
+const ChatContainer = styled.div`
+  flex: 1;
+`;
