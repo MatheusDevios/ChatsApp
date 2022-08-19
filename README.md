@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ChatsApp
+A Responsive Chat Application made with Next JS, Hooks, React and using Firebase DB and Auth.
+
+🛠️ Technologies
+React
+Next.js
+⚙️ Requirements
+Git
+yarn
+React
+Next.js
+Firebase db
+
+🚀 Installation
+$ git clone https://github.com/MatheusDevios/MatheusWeb.git
+$ cd MatheusWeb
 
 ## Getting Started
 
