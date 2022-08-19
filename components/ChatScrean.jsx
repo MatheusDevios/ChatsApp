@@ -108,7 +108,7 @@ const ChatScrean = ({ chat, messages }) => {
           <h3>{recipientUser}</h3>
           {recipientSnapshot ? (
             <p>
-              Last Active:
+              Last Active:{" "}
               {recipient?.lastSeen ? (
                 <TimeAgo datetime={recipient?.lastSeen} />
               ) : (
