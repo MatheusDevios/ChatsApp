@@ -1,20 +1,28 @@
-ChatsApp
-A Responsive Chat Application made with Next JS, Hooks, React and using Firebase DB and Auth.
+# <div align="center">ChatsApp Web Application</div>
+<p align="center">A Responsive Chat Application made with Next JS, Hooks, React and using Firebase DB and Auth.</p>
 
-🛠️ Technologies
-React
-Next.js
-⚙️ Requirements
-Git
-yarn
-React
-Next.js
-Firebase db
+## 🛠️ Technologies
 
-🚀 Installation
-$ git clone https://github.com/MatheusDevios/MatheusWeb.git
-$ cd MatheusWeb
+<ul>
+  <li><a href="https://reactjs.org/">React</a></li>
+  <li><a href="https://nextjs.org/blog/new-documentation">Next.js</a></li>
+</ul>
 
+## ⚙️ Requirements
+
+<ul>
+  <li><a href="https://git-scm.com/">Git</a></li>
+  <li><a href="https://yarnpkg.com/package/react">YARN</a></li>
+  <li><a href="https://https://reactjs.org/">React</a></li>
+  <li><a href="https://nextjs.org/blog/new-documentation">Next.js</a></li>
+</ul>
+
+## 🚀 Installation
+
+```
+$ git clone https://github.com/MatheusDevios/ChatsApp.git
+$ cd ChatsApp
+```
 ## Getting Started
 
 First, run the development server:
