@@ -48,12 +48,15 @@ const Sidebar = () => {
   return (
     <Container>
       <Header>
-        <UserAvatar
-          src={user.photoURL}
-          onClick={() => {
-            auth.signOut();
-          }}
-        />
+        <Logout>
+          <LogoutP>Logout</LogoutP>
+          <UserAvatar
+            src={user.photoURL}
+            onClick={() => {
+              auth.signOut();
+            }}
+          />
+        </Logout>
 
         <IconsContainer>
           <IconButton>
@@ -113,6 +116,7 @@ const Header = styled.div`
 
 const UserAvatar = styled(Avatar)`
   cursor: pointer;
+  margin-left: 5px;
 
   :hover {
     opacity: 0.8;
@@ -120,6 +124,20 @@ const UserAvatar = styled(Avatar)`
 `;
 
 const IconsContainer = styled.div``;
+
+const LogoutP = styled.p`
+  margin-bottom: 5px;
+  margin-top: 0px;
+`;
+const Logout = styled.div`
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+
+  :hover {
+    opacity: 0.8;
+  }
+`;
 
 const Search = styled.div`
   display: flex;
