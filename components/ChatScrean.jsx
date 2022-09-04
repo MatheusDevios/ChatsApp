@@ -56,6 +56,7 @@ const ChatScrean = ({ chat, messages }) => {
       );
     });
   } else {
+    //render for the first time when get data from serverSide rendering
     content = JSON.parse(messages).map((message) => {
       return <Message key={message.id} user={message.user} message={message} />;
     });
