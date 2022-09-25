@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   const createChat = async () => {
     const input = prompt(
-      "Please enter an email adders for the user you wish to chat with"
+      "Please enter an email adders for the user you wish to chat with: "
     );
 
     if (!input) return;
@@ -39,10 +39,11 @@ const Sidebar = () => {
   };
 
   const chatAlreadyExists = (recipientEmail) =>
+    //this will return true or false wether we have a chat with the email or don't. That's why the "!!"
     !!chatSnapshot?.docs.find(
       (chat) =>
         // console.log(chat)
-        chat.data().users.find((user) => user === recipientEmail)?.length > 0
+        chat.data().users.find((user) => user === recipientEmail)?.length > 0 // if the lenth of the input is bigger than 0
     );
 
   return (

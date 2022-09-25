@@ -16,6 +16,7 @@ const Chat = ({ id, users }) => {
     query(collection(db, "users"), where("email", "==", recipientEmail))
   );
 
+  //check if user is already on the DB
   const recipient = recipientSnapshot?.docs[0]?.data();
 
   const enterChat = () => {
